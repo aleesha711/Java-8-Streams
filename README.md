@@ -1,5 +1,5 @@
 # Streams
-The official Java 8 release came with a myriad of features, the most prominent of which are undoubtedly lambdas and the streams API.
+Java 8 came with the most useful and fast computational features undoubtedly that are lamdas and streams API.
 
 The whole idea of streams is to enable functional-style operations on streams of elements. A stream is an abstraction, it’s not a data structure. It’s not a collection where you can store elements. The most important difference between a stream and a structure is that a stream doesn’t hold the data. For example you cannot point to a location in the stream where a certain element exists. You can only specify the functions that operate on that data. A stream is an abstraction of a non-mutable collection of functions applied in some order to the data.
 
@@ -30,6 +30,6 @@ Stream<String> names = people.stream()
   .map(Person::getName)
   .map(String::toUpperCase);
   ```
-None of the names will immediately collected and made into the upper case. When does the computation occur, you might ask. When a terminal operation is called. All operations that return something other than a stream are terminal. Operations like forEach, collect, reduce are terminal. This makes streams particularly efficient at handling large amounts of data.
+When a terminal operation is called. All operations that return something other than a stream are terminal. Operations like forEach, collect, reduce are terminal. This makes streams particularly efficient at handling large amounts of data.
 
 
