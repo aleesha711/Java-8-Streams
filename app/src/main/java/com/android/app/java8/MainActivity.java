@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
         javaProgrammers.forEach(giveRaise);
         javaProgrammers.forEach((p) -> System.out.printf("%s earns now $%,d.%n", p.getFullName(), p.getSalary()));
 
-        // Print PHP programmers that earn more than $1,400
         System.out.println("\nJava programmers that earn more than $1,400:");
         javaProgrammers.stream()
                 .filter((p) -> (p.getSalary() > 1400))
@@ -85,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
                 .limit(3)
                 .forEach((p) -> System.out.println(p.getFullName()));
 
-        // sorted, collect, limit, min, max examples
         System.out.println("\n\nSort and print first 5 Java programmers by name:");
         List<Person> sortedJavaProgrammers = javaProgrammers
                 .stream()
@@ -103,7 +101,6 @@ public class MainActivity extends AppCompatActivity {
 
         sortedJavaProgrammers.forEach((p) -> System.out.printf("%s %s; %n", p.getFirstName(), p.getLastName()));
 
-        // min is faster than sorting and choosing the first
         System.out.println("\nGet the lowest Java programmer salary:");
         Person pers = javaProgrammers
                 .stream()
@@ -120,7 +117,6 @@ public class MainActivity extends AppCompatActivity {
 
         System.out.printf("Name: %s %s; Salary: $%,d.", person.getFirstName(), person.getLastName(), person.getSalary());
 
-        // map, collect examples
         System.out.println("\nGet Java programmers first name to String:");
         String phpDevelopers = javaProgrammers
                 .stream()
@@ -164,7 +160,6 @@ public class MainActivity extends AppCompatActivity {
 
         System.out.printf("Money spent for paying Java programmers: $%,d %n", totalSalary);
 
-        //Get count, min, max, sum, and average for numbers
         System.out.println("Get Java programmers salary to List:");
         List<Integer> salary = javaProgrammers
                 .stream()
