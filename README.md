@@ -30,6 +30,6 @@ Stream<String> names = people.stream()
   .map(Person::getName)
   .map(String::toUpperCase);
   ```
-When a terminal operation is called. All operations that return something other than a stream are terminal. Operations like forEach, collect, reduce are terminal. This makes streams particularly efficient at handling large amounts of data.
+All operations that return something other than a stream are terminal. Operations like forEach, collect, reduce are terminal. This makes streams particularly efficient at handling large amounts of data.
 
 
